@@ -1,0 +1,37 @@
+# Netlify configuration — Chuks Properties Academy Limited
+# Static site, no build step. Publish the repository root.
+
+[build]
+  publish = "."
+  command = ""
+
+# Clean URLs: /about instead of /about/index.html
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Security + caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
