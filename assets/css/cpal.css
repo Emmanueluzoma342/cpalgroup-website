@@ -1,3 +1,40 @@
+/* --------------------------------------------------------------------------
+   Self-hosted fonts. Previously loaded from Google's CDN, which is a render
+   blocker: on a slow or filtered connection the browser waits for it before
+   painting anything, and the page appears to hang. These ship with the site.
+   font-display: swap means text is readable immediately either way.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/assets/fonts/archivo-var.woff2') format('woff2-variations'),
+       url('/assets/fonts/archivo-var.woff2') format('woff2');
+  font-weight: 400 800;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Newsreader';
+  src: url('/assets/fonts/newsreader-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Newsreader';
+  src: url('/assets/fonts/newsreader-600.woff2') format('woff2');
+  font-weight: 500 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/assets/fonts/plexmono-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/assets/fonts/plexmono-500.woff2') format('woff2');
+  font-weight: 500 700; font-style: normal; font-display: swap;
+}
+
 /* ==========================================================================
    CPAL — Chuks Properties Academy Limited
    Concept: the site behaves like a land document, not a property brochure.

@@ -16,6 +16,13 @@ Static HTML. No build step, no framework, no dependencies. Netlify publishes the
 | `/academy/` | CPAL Academy |
 | `/contact/` | Contact and inspection booking |
 
+## Fonts
+
+Self-hosted in `/assets/fonts/` as subset WOFF2, roughly 172KB for the whole set. They are **not** loaded
+from Google Fonts, deliberately: an external stylesheet is a render blocker, and on a slow or filtered
+connection the browser waits for it before painting anything, so the page appears to hang. Do not
+reintroduce a `fonts.googleapis.com` link.
+
 ## Structure
 
 ```

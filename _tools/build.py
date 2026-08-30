@@ -27,10 +27,9 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://cpalgroup.com/assets/img/inspection-walk.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<meta property="og:image" content="/assets/img/launch-day.jpg">
+<link rel="preload" href="/assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/cpal.css">
 </head>
 <body>
