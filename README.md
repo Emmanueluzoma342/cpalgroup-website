@@ -1,113 +1,91 @@
 # cpalgroup.com
 
-Website for **Chuks Properties Academy Limited (CPAL)**, Asaba, Delta State. RC 8324784.
+Website for **Chuks Properties Academy Limited** (CPAL), Asaba, Delta State. RC 8324784.
 
-Static HTML. No build step, no framework, no dependencies. Netlify publishes the repository root as-is.
+Static HTML. No build step, no framework, no dependencies. The host publishes the repository root as-is.
 
 ## Pages
 
 | Path | Purpose |
 |---|---|
-| `/` | Home |
-| `/estates/doctors-residence/` | Doctor's Residence Estate sales page |
-| `/about/` | About CPAL and leadership |
-| `/realtors/` | Realtor recruitment |
-| `/realtor-hub/` | Realtor sales kit, prospect PDF, rules |
+| `/` | Homepage |
+| `/estates/doctors-residence/` | Long-form sales page for the estate |
+| `/about/` | Company and Dr Chukwuma Agba |
 | `/academy/` | CPAL Academy |
-| `/contact/` | Contact and inspection booking |
+| `/realtors/` | Realtor recruitment |
+| `/realtor-hub/` | Internal materials for realtors |
+| `/contact/` | Contact and enquiry form |
+| `/blog/` | Guides (SEO) |
+
+## Content rules — read before editing
+
+These five things must **never** appear on this site. Each one is a legal or regulatory risk,
+not a style preference.
+
+1. **Never write the Certificate of Occupancy as issued.** It is being processed. Write
+   "in progress" or "being processed". This appears on the homepage, the estate page and the realtor hub.
+2. **Never state or imply an investment return, percentage or future value.** Land is sold as
+   ownership. Show the bridge, the road contract and the other developers, and let the reader draw
+   their own conclusion. This is what the SEC action against PWAN turned on.
+3. **Never describe planned facilities in the present tense.** The gate house, perimeter security,
+   pipe-borne water and sports facility are planned, not built.
+4. **Never round the plot count.** It is 44 of 64 remaining. Accuracy is the argument of this site.
+   Update it in: `/index.html` (facts strip, availability block), `/estates/doctors-residence/`
+   (facts strip, scarcity band), `/realtor-hub/` (facts table).
+5. **Never mention Phase 2.** It has not launched. Mentioning it creates wait-and-see behaviour.
+
+## Contact form
+
+Does not post anywhere. It composes the visitor's answers into a WhatsApp message to 0806 789 8622.
+Name, email and phone are required and validated (phone counts digits only, 7–15, so +234 and
+diaspora formats pass). To change the destination, edit the `wa.me` number in the script at the
+bottom of `/contact/index.html`.
+
+## Lead magnet
+
+The 17-page buyer pack (`/assets/docs/`) is gated behind a WhatsApp message rather than an email
+form. The button opens a chat with the request pre-written. CPAL replies with the PDF, which starts
+a conversation rather than filling a list nobody works.
 
 ## Fonts
 
-Self-hosted in `/assets/fonts/` as subset WOFF2, roughly 172KB for the whole set. They are **not** loaded
-from Google Fonts, deliberately: an external stylesheet is a render blocker, and on a slow or filtered
-connection the browser waits for it before painting anything, so the page appears to hang. Do not
-reintroduce a `fonts.googleapis.com` link.
-
-## Structure
-
-```
-/assets/css/cpal.css     design system, single stylesheet
-/assets/img/             photography and logo
-/assets/docs/            prospect pack PDF
-netlify.toml             headers, caching, redirects
-sitemap.xml  robots.txt
-```
-
-## Editing content
-
-Everything is plain HTML. The pieces most likely to change:
-
-**Plot availability.** Homepage `index.html`, near the bottom, in the script block:
-```js
-var TOTAL = 64, SOLD = 20;
-```
-Also update the visible figures: `board__count` on the homepage, the `Availability` ledger row, and the facts list on the estate page.
-
-**Price.** Search for `4.5M` and `4,500,000`.
-
-**Documentation status.** Each ledger row carries a tag: `tag--ok` (confirmed, green), `tag--wait` (outstanding, rust), `tag--build` (in progress, violet). When the C of O is issued, change that row's tag from `tag--wait` to `tag--ok` and update the wording on every page it appears.
-
-## Content rules
-
-These are not stylistic preferences. They exist to keep CPAL out of misrepresentation claims.
-
-- The Certificate of Occupancy is **in view**, not issued. Never write it as issued anywhere.
-- Gate house, security, pipe-borne water and sports facility are **planned**. Never present tense.
-- Land is sold as **ownership**. No projected returns, ROI figures or appreciation promises.
-- Commission is paid on **property sales only**. No downline or recruitment earnings language.
-- Plot counts must match the ground. Do not round.
-
-## Settled: the LGA
-
-Atuma-Iga is in **Oshimili North LGA**, not Aniocha North. Three independent sources agree: the Delta State
-Government project board photographed on site, and multiple competing estate listings at Atuma-Iga on Nigerian
-property portals. Site copy and meta descriptions use Oshimili North throughout. Still worth confirming against
-the registered survey plan before it goes on any printed document.
-
-## Price comparison
-
-The comparison ledgers on the home, estate and realtor-hub pages use publicly listed prices from Nigerian
-property portals as at August 2026. Competitors are deliberately unnamed. Re-check these figures every few
-months and update the "Listed Aug 2026" stamp when you do. If a competitor drops below CPAL on cost per square
-metre, remove the ledger rather than leave a stale claim standing.
-
-## Payment terms (confirmed by Dr Agba, Aug 2026)
-
-- Outright: N4,500,000.
-- Instalment: minimum N500,000 deposit. No fixed monthly schedule.
-- Balance must clear within six months.
-- Past six months: 5% of the property price per month of default (N225,000/month).
-- Withdrawal: full payment refunded less 20%. Allow three weeks.
-
-These appear on the estate page, in the realtor hub facts ledger, and on page 06 of the prospect pack.
-The penalty is disclosed prominently on purpose. Do not move it into small print.
-
-## Contact numbers
-
-Primary phone and WhatsApp: **0806 789 8622**. Second line: 0902 931 2069.
-All `wa.me` links and the floating dock use 0806.
+Self-hosted in `/assets/fonts/` as subset WOFF2, ~116KB total. They are **not** loaded from Google
+Fonts, deliberately: an external stylesheet is a render blocker, and on a slow or filtered connection
+the browser waits for it before painting anything. Do not reintroduce a `fonts.googleapis.com` link.
 
 ## Videos
 
-Hosted on videas.fr, linked from the estate page and realtor hub. If a link dies, the pages break silently
-— check them when updating.
+Load only when tapped. The poster is a still; the player is injected on click. This keeps the page
+light on mobile data and avoids empty frames.
 
-## Outstanding
+## Rebuilding pages
 
-- Confirm the studio portraits and the Delta TV still are all Dr Chukwuma Agba.
-- Doctorate field, book purchase link, and where the decade of real estate experience was spent.
-- Realtor minimum requirement.
-- Aerial footage and the estate survey layout.
-- Do not publish IMG_7863: an armed escort is visible. Meta will reject any ad containing it.
+`_tools/build.py` holds the shared header, footer and CTA components.
+`_tools/pages.py` generates about, academy, realtors, realtor-hub and contact.
+`_tools/blog.py` generates the guides index and articles.
 
-## Deploy
+Run from the project root:
 
-Push to `main`. The host rebuilds on push. No build step, no dependencies.
+```
+python3 _tools/pages.py
+python3 _tools/blog.py
+```
 
-The contact form collects name, email, phone, location, enquiry type and message. Email and phone are
-required and validated (phone counts digits only, 7 to 15, so +234 and diaspora formats all pass). The
-phone number is asked for separately because many people use a different line for WhatsApp than for calls. The form does not
-post anywhere. It composes the visitor's answers into a WhatsApp message and
-opens a chat with 0806 789 8622. Nothing to configure, nothing to monitor, and the enquiry lands where
-CPAL already works. To change the destination number, edit the `wa.me` number in the script at the
-bottom of `/contact/index.html`.
+The homepage and estate page are hand-maintained; edit their HTML directly.
+
+## Adding a blog post
+
+Add an entry to `POSTS` and a matching key in `BODY` in `_tools/blog.py`, then run it. Add the URL
+to `sitemap.xml`.
+
+Target local buyer-intent searches rather than broad terms. Working list: cost of land in specific
+Asaba areas, document explainers, buying from abroad, verification checklists, land banking in Delta
+State, Oshimili North area guides.
+
+## Outstanding from the client
+
+- Dr Agba's doctorate field (earned or honorary)
+- Where *Doctor Sales Formula* can be purchased
+- Where the decade of experience was spent — the single most valuable addition to `/about/`
+- Exact block quantity for the two-plot offer
+- Aerial footage and the estate survey layout
