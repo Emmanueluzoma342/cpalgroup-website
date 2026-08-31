@@ -387,16 +387,24 @@
 (function () {
   'use strict';
 
-  // --- Availability board. 64 plots, 20 sold. Sold positions are scattered
-  // --- deterministically so the board reads as a real record, not a gradient.
+  // --- Availability board. 64 plots, 20 sold. Sold positions are chosen
+  // --- deterministically with a bounded loop so it can never hang.
   var TOTAL = 64, SOLD = 20;
   var board = document.getElementById('board');
   if (board) {
-    var soldSet = {}, seed = 8324784, i;
-    for (i = 0; i < SOLD; i++) {
-      do { seed = (seed * 1103515245 + 12345) % 2147483648; var k = seed % TOTAL; } while (soldSet[k]);
-      soldSet[k] = 1;
+    // Build the list of all positions, shuffle deterministically, take the
+    // first 20 as sold. No open-ended while loop, so termination is guaranteed.
+    var order = [], i;
+    for (i = 0; i < TOTAL; i++) order.push(i);
+    var seed = 8324784;
+    function rnd() { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; }
+    for (i = TOTAL - 1; i > 0; i--) {
+      var j = Math.floor(rnd() * (i + 1));
+      var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
     }
+    var soldSet = {};
+    for (i = 0; i < SOLD; i++) soldSet[order[i]] = 1;
+
     var frag = document.createDocumentFragment();
     for (i = 0; i < TOTAL; i++) {
       var cell = document.createElement(soldSet[i] ? 'div' : 'a');
@@ -415,14 +423,16 @@
   }
 
   // --- Scroll reveal, cheap and skipped when motion is reduced.
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.s > .shell > *, .hero__body, .plate').forEach(function (el) {
-      el.classList.add('up'); io.observe(el);
-    });
-  }
+  try {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.s > .shell > *, .hero__body, .plate').forEach(function (el) {
+        el.classList.add('up'); io.observe(el);
+      });
+    }
+  } catch (err) { /* reveal is decorative; never let it break the page */ }
 })();
 </script>
 
