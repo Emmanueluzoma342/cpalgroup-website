@@ -72,7 +72,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.05rem, 0.98rem + 0.32vw, 1.19rem);
   line-height: 1.6;
   font-optical-sizing: auto;
@@ -93,7 +93,7 @@ a { color: var(--navy); text-underline-offset: 0.18em; }
 /* ---------- Type ---------- */
 
 .d1, .d2, .d3 {
-  font-family: 'Archivo', system-ui, sans-serif;
+  font-family: 'Archivo', 'Segoe UI', Roboto, system-ui, sans-serif;
   font-variation-settings: 'wdth' 88;
   font-weight: 800;
   letter-spacing: -0.022em;
@@ -106,7 +106,7 @@ a { color: var(--navy); text-underline-offset: 0.18em; }
 .d3 { font-size: clamp(1.28rem, 1.1rem + 0.85vw, 1.6rem); line-height: 1.08; letter-spacing: -0.012em; font-weight: 700; }
 .d1 em, .d2 em { font-style: normal; color: var(--navy); }
 
-.mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.74rem; letter-spacing: 0.055em; text-transform: uppercase; color: var(--ink-soft); }
+.mono { font-family: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace; font-size: 0.74rem; letter-spacing: 0.055em; text-transform: uppercase; color: var(--ink-soft); }
 
 .lede { font-size: clamp(1.16rem, 1.05rem + 0.5vw, 1.4rem); line-height: 1.5; color: var(--ink-soft); text-wrap: pretty; }
 p { text-wrap: pretty; }
@@ -251,7 +251,7 @@ p { text-wrap: pretty; }
 
 .field { margin-bottom: 1.05rem; }
 .field label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.655rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.38rem; }
-.field input, .field select, .field textarea { width: 100%; font-family: 'Newsreader', Georgia, serif; font-size: 1rem; padding: 0.72rem 0.85rem; background: #fff; color: var(--ink); border: 1px solid var(--rule-firm); border-radius: 2px; transition: border-color 0.15s; }
+.field input, .field select, .field textarea { width: 100%; font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 1rem; padding: 0.72rem 0.85rem; background: #fff; color: var(--ink); border: 1px solid var(--rule-firm); border-radius: 2px; transition: border-color 0.15s; }
 .field input:hover, .field textarea:hover, .field select:hover { border-color: var(--navy); }
 .field textarea { resize: vertical; min-height: 7rem; }
 .field .err { display: none; font-family: 'IBM Plex Mono', monospace; font-size: 0.66rem; color: var(--laterite); margin-top: 0.35rem; letter-spacing: 0.04em; }
