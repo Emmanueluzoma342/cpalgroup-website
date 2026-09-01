@@ -22,8 +22,11 @@ Static HTML. No build step, no framework, no dependencies. The host publishes th
 These five things must **never** appear on this site. Each one is a legal or regulatory risk,
 not a style preference.
 
-1. **Never write the Certificate of Occupancy as issued.** It is being processed. Write
-   "in progress" or "being processed". This appears on the homepage, the estate page and the realtor hub.
+1. **Never write the Certificate of Occupancy as issued.** It is in process. Write "in process".
+   The site frames this as a *stage in the normal sequence* rather than a shortcoming: every estate
+   moves through acquisition, survey, allocation and C of O, and the price rises at each step. That
+   framing is why 464 sqm here is N4.5M against N12.5M nearby. Keep that framing; do not revert to
+   apologetic wording, and do not remove the honest status.
 2. **Never state or imply an investment return, percentage or future value.** Land is sold as
    ownership. Show the bridge, the road contract and the other developers, and let the reader draw
    their own conclusion. This is what the SEC action against PWAN turned on.
