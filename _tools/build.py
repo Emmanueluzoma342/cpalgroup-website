@@ -88,7 +88,7 @@ FOOTER = f'''</main>
         <ul>
           <li><a href="tel:{PHONE}">0806 789 8622</a></li>
           <li><a href="tel:+2349029312069">0902 931 2069</a></li>
-          <li><a href="mailto:cpalrealities@gmail.com">cpalrealities@gmail.com</a></li>
+          <li><a href="mailto:info@cpalgroup.com">info@cpalgroup.com</a></li>
           <li><a href="/contact/">Book an inspection</a></li>
         </ul>
       </div>

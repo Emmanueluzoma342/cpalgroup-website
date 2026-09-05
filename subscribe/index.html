@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe for a plot | Doctor's Residence, Atuma-Iga | CPAL</title>
+<meta name="description" content="Complete the CPAL subscription form for a residential or commercial plot at Doctor's Residence Estate, Atuma-Iga, Asaba. Takes about four minutes, from anywhere in the world.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://cpalgroup.com/subscribe/">
+<meta property="og:title" content="Subscribe for a plot | Doctor's Residence, Atuma-Iga | CPAL">
+<meta property="og:description" content="Complete the CPAL subscription form for a residential or commercial plot at Doctor's Residence Estate, Atuma-Iga, Asaba. Takes about four minutes, from anywhere in the world.">
+<meta property="og:image" content="/assets/img/hero-couple.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/css/cpal.css">
+</head>
+<body>
+<header class="top">
+  <div class="shell top__in">
+    <a class="brand" href="/"><img src="/assets/img/cpal-logo.png" alt="CPAL" width="120" height="36"></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="/estates/doctors-residence/">The estate</a>
+      <a href="/about/">About</a>
+      <a href="/academy/">Academy</a>
+      <a href="/realtors/">Realtors</a>
+      <a href="/blog/">Guides</a>
+      <a href="/contact/">Contact</a>
+      <a class="nav__cta" href="/subscribe/">Subscribe for a plot</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="s s--tight s--navy">
+    <div class="shell">
+      <div class="sub">
+        <h1 class="promise">Subscribe for your plot.</h1>
+        <p class="lede" style="margin-top:16px;">This is the same subscription form we use in the
+           office, so you can complete it from wherever you are. It takes about four minutes.
+           Nothing is committed until we confirm your plot in writing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="shell">
+      <div class="sub">
+
+        <ol class="sub__bar" id="bar">
+          <li class="on">Your plot</li>
+          <li>Your details</li>
+          <li>Next of kin</li>
+          <li>Declaration</li>
+        </ol>
+
+        <form id="subform" name="subscription" method="POST" action="/thank-you/"
+              data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="subscription">
+          <input type="hidden" name="reference" id="reference">
+          <input type="hidden" name="submitted" id="submitted">
+          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+
+          <!-- ---------------- step 1 ---------------- -->
+          <section class="step" id="s1">
+            <h2>Which plot are you taking?</h2>
+            <p class="step__lede">If you are not sure yet, choose what you are leaning towards.
+               We confirm availability with you before any payment.</p>
+
+            <div class="field">
+              <label>Plot type</label>
+              <div class="opts opts--2">
+                <label class="opt"><input type="radio" name="plot_type" value="Residential" checked>
+                  <b>Residential</b><span>To build a family home</span></label>
+                <label class="opt"><input type="radio" name="plot_type" value="Commercial">
+                  <b>Commercial</b><span>Shop, office or business use</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="plots">How many plots</label>
+              <input id="plots" name="number_of_plots" type="number" min="1" max="50" value="1" inputmode="numeric">
+              <span class="err">Please enter at least one plot</span>
+            </div>
+
+            <div class="field">
+              <label>Payment plan</label>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="payment_plan" value="Outright" checked>
+                  <b>Outright</b><span>Paid in full at once</span></label>
+                <label class="opt"><input type="radio" name="payment_plan" value="0-3 months">
+                  <b>Spread over 3 months</b><span>Deposit, then monthly</span></label>
+                <label class="opt"><input type="radio" name="payment_plan" value="0-6 months">
+                  <b>Spread over 6 months</b><span>Deposit, then monthly</span></label>
+                <label class="opt"><input type="radio" name="payment_plan" value="0-12 months">
+                  <b>Spread over 12 months</b><span>Deposit, then monthly</span></label>
+              </div>
+              <p style="font-size:.96rem; color:var(--muted); margin-top:12px;">Deposit and monthly
+                 amounts are confirmed with you in writing before you pay anything.</p>
+            </div>
+
+            <div class="stepnav">
+              <button class="btn btn--navy" type="button" data-next="2">Continue</button>
+            </div>
+          </section>
+
+          <!-- ---------------- step 2 ---------------- -->
+          <section class="step" id="s2" hidden>
+            <h2>Your details.</h2>
+            <p class="step__lede">These go on the survey plan and the deed, so please enter your
+               name exactly as it appears on your identification.</p>
+
+            <div class="field"><label for="name">Full name</label>
+              <input id="name" name="full_name" type="text" autocomplete="name">
+              <span class="err">Please enter your full name</span></div>
+
+            <div class="field"><label for="address">Home address</label>
+              <input id="address" name="address" type="text" autocomplete="street-address">
+              <span class="err">Please enter your address</span></div>
+
+            <div class="pair">
+              <div class="field"><label for="dob">Date of birth</label>
+                <input id="dob" name="date_of_birth" type="date">
+                <span class="err">Please enter your date of birth</span></div>
+              <div class="field"><label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option>Male</option><option>Female</option>
+                </select></div>
+            </div>
+
+            <div class="pair">
+              <div class="field"><label for="occupation">Occupation</label>
+                <input id="occupation" name="occupation" type="text">
+                <span class="err">Please enter your occupation</span></div>
+              <div class="field"><label for="marital">Marital status</label>
+                <select id="marital" name="marital_status">
+                  <option>Single</option><option>Married</option>
+                  <option>Widowed</option><option>Divorced</option>
+                </select></div>
+            </div>
+
+            <div class="pair">
+              <div class="field"><label for="nationality">Nationality</label>
+                <input id="nationality" name="nationality" type="text" value="Nigerian">
+                <span class="err">Please enter your nationality</span></div>
+              <div class="field"><label for="residence">Country you live in</label>
+                <input id="residence" name="country_of_residence" type="text" autocomplete="country-name">
+                <span class="err">Please enter the country you live in</span></div>
+            </div>
+
+            <div class="pair">
+              <div class="field"><label for="phone1">Phone and WhatsApp</label>
+                <input id="phone1" name="phone_1" type="tel" inputmode="tel"
+                       placeholder="Include country code if abroad" autocomplete="tel">
+                <span class="err">Please enter a number we can reach you on</span></div>
+              <div class="field"><label for="phone2">Second number (optional)</label>
+                <input id="phone2" name="phone_2" type="tel" inputmode="tel"></div>
+            </div>
+
+            <div class="field"><label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email"
+                     placeholder="Where we send the survey plan and deed">
+              <span class="err">We need a valid email to send your documents</span></div>
+
+            <div class="stepnav">
+              <button class="btn btn--navy" type="button" data-next="3">Continue</button>
+              <button class="back" type="button" data-back="1">Back</button>
+            </div>
+          </section>
+
+          <!-- ---------------- step 3 ---------------- -->
+          <section class="step" id="s3" hidden>
+            <h2>Next of kin.</h2>
+            <p class="step__lede">Land outlives all of us. Naming a next of kin now means your
+               family is not left proving anything later.</p>
+
+            <div class="field"><label for="kin_name">Next of kin full name</label>
+              <input id="kin_name" name="kin_name" type="text">
+              <span class="err">Please enter their full name</span></div>
+
+            <div class="field"><label for="kin_address">Their address</label>
+              <input id="kin_address" name="kin_address" type="text">
+              <span class="err">Please enter their address</span></div>
+
+            <div class="field"><label for="kin_rel">Relationship to you</label>
+              <input id="kin_rel" name="kin_relationship" type="text" placeholder="Wife, husband, son, daughter, brother">
+              <span class="err">Please tell us the relationship</span></div>
+
+            <div class="stepnav">
+              <button class="btn btn--navy" type="button" data-next="4">Continue</button>
+              <button class="back" type="button" data-back="2">Back</button>
+            </div>
+          </section>
+
+          <!-- ---------------- step 4 ---------------- -->
+          <section class="step" id="s4" hidden>
+            <h2>Declaration.</h2>
+            <p class="step__lede">Read this carefully. Typing your name below has the same weight
+               as signing the paper form in our office.</p>
+
+            <div class="reffed" id="reffed" hidden>
+              <b>Referred by</b><span id="reffed_name"></span>
+            </div>
+
+            <div class="field" id="ref_manual">
+              <label for="referrer">Were you referred by a CPAL realtor? (optional)</label>
+              <input id="referrer" name="referred_by" type="text" placeholder="Their full name">
+            </div>
+
+            <div class="field"><label for="referrer_phone">Realtor's phone number (optional)</label>
+              <input id="referrer_phone" name="referrer_phone" type="tel" inputmode="tel"></div>
+
+            <div class="note" style="margin:26px 0 24px;">
+              <p style="margin:0;">I affirm that all the information I have provided as a requirement
+                 for the land at Doctor's Residence, Atuma-Iga, is correct. I understand that Chuks
+                 Properties Academy Limited shall not be responsible for any inaccurate information
+                 provided by me.</p>
+            </div>
+
+            <div class="field"><label for="signature">Type your full name to sign</label>
+              <input id="signature" name="signature" type="text" placeholder="Exactly as entered above">
+              <span class="err">Please type your full name to sign</span></div>
+
+            <label class="consent" id="c1"><input type="checkbox" name="declaration" value="Agreed">
+              <span>I confirm the information above is correct, and I am applying to subscribe for
+                    the plot or plots described.</span></label>
+
+            <label class="consent" id="c2"><input type="checkbox" name="data_consent" value="Agreed">
+              <span>I agree that CPAL may hold and use these details to process my subscription and
+                    prepare my documents, as set out in the <a href="/privacy/" target="_blank"
+                    style="color:var(--navy);">privacy notice</a>.</span></label>
+
+            <div class="stepnav">
+              <button class="btn btn--gold" type="submit">Submit my subscription</button>
+              <button class="back" type="button" data-back="3">Back</button>
+            </div>
+
+            <p style="font-size:.96rem; color:var(--muted); margin-top:20px;">Submitting this form
+               does not transfer money and does not reserve a plot on its own. We will contact you to
+               confirm availability, current price and the payment schedule in writing.</p>
+          </section>
+        </form>
+
+        <div class="note" style="margin-top:40px;">
+          <h3 style="margin-bottom:12px;">Before you pay anyone</h3>
+          <p style="margin:0;">CPAL confirms account details with you directly, by call or in writing.
+             Never act on account details sent through a status update, a group chat or a forwarded
+             flyer. Call the office on <a href="tel:+2348067898622" style="color:var(--navy);">0806 789
+             8622</a> and check.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__grid">
+      <div>
+        <h4>CPAL</h4>
+        <p style="color:#9DB2CA;">Chuks Properties Academy Limited, RC 8324784.<br>
+           Emegoz Plaza, beside Ezenei Junction, along Asaba-Benin Expressway, Asaba, Delta State.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="/estates/doctors-residence/">The estate</a></li>
+          <li><a href="/about/">About CPAL</a></li>
+          <li><a href="/academy/">Academy</a></li>
+          <li><a href="/realtors/">Become a realtor</a></li>
+          <li><a href="/blog/">Guides</a></li>
+          <li><a href="/privacy/">Privacy notice</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <ul>
+          <li><a href="tel:+2348067898622">0806 789 8622</a></li>
+          <li><a href="tel:+2349029312069">0902 931 2069</a></li>
+          <li><a href="mailto:info@cpalgroup.com">info@cpalgroup.com</a></li>
+          <li><a href="/subscribe/">Subscribe for a plot</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>Land is sold as ownership. CPAL does not offer investment returns.</span>
+      <span>Designed and built by <a href="https://swellbridgedigital.com" target="_blank" rel="noopener">Swellbridge Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/2348067898622?text=Hello%20CPAL%2C%20I%20have%20a%20question%20about%20subscribing%20for%20a%20plot." target="_blank" rel="noopener">
+  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.2-1.3c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.9-1.4-1.3-3-1.3-4.6C3.5 7.3 7.3 3.5 12 3.5s8.5 3.8 8.5 8.5-3.8 8.2-8.5 8.2z"/></svg> <span>WhatsApp</span></a>
+
+<script>
+(function () {
+  var b = document.getElementById('burger'), n = document.getElementById('nav');
+  if (b && n) b.addEventListener('click', function(){
+    var open = n.classList.toggle('open');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById('subform');
+  if (!form) return;
+  var bar = document.getElementById('bar').children;
+  var cur = 1, LAST = 4;
+
+  // ---- referral link:  /subscribe/?ref=Favour%20Okoro
+  try {
+    var ref = new URLSearchParams(location.search).get('ref');
+    if (ref) {
+      ref = ref.replace(/[<>]/g, '').replace(/[-_+]+/g, ' ').trim().slice(0, 60);
+      if (ref) {
+        ref = ref.replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+        document.getElementById('referrer').value = ref;
+        document.getElementById('reffed_name').textContent = ref;
+        document.getElementById('reffed').hidden = false;
+        document.getElementById('ref_manual').hidden = true;
+      }
+    }
+  } catch (e) {}
+
+  function show(n) {
+    for (var i = 1; i <= LAST; i++) document.getElementById('s' + i).hidden = (i !== n);
+    for (var j = 0; j < bar.length; j++) {
+      bar[j].className = (j + 1 === n) ? 'on' : (j + 1 < n ? 'done' : '');
+    }
+    cur = n;
+    window.scrollTo({ top: document.querySelector('.sub').offsetTop - 20, behavior: 'smooth' });
+  }
+
+  function bad(el, isBad) {
+    var f = el.closest('.field') || el.closest('.consent');
+    if (f) f.classList.toggle('is-bad', isBad);
+    return isBad;
+  }
+  function need(id) {
+    var el = document.getElementById(id);
+    return bad(el, !el.value.trim());
+  }
+
+  function valid(n) {
+    var invalid = false;
+    if (n === 1) {
+      var p = document.getElementById('plots');
+      invalid = bad(p, !(parseInt(p.value, 10) >= 1));
+    }
+    if (n === 2) {
+      ['name', 'address', 'dob', 'occupation', 'nationality', 'residence'].forEach(function (id) {
+        if (need(id)) invalid = true;
+      });
+      var em = document.getElementById('email');
+      if (bad(em, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()))) invalid = true;
+      var ph = document.getElementById('phone1');
+      var d = ph.value.replace(/\D/g, '').length;
+      if (bad(ph, !(d >= 7 && d <= 15))) invalid = true;
+    }
+    if (n === 3) {
+      ['kin_name', 'kin_address', 'kin_rel'].forEach(function (id) { if (need(id)) invalid = true; });
+    }
+    if (n === 4) {
+      if (need('signature')) invalid = true;
+      ['c1', 'c2'].forEach(function (id) {
+        var box = document.getElementById(id);
+        var ok = box.querySelector('input').checked;
+        box.classList.toggle('is-bad', !ok);
+        if (!ok) invalid = true;
+      });
+    }
+    if (invalid) {
+      var first = document.getElementById('s' + n).querySelector('.is-bad input, .is-bad textarea');
+      if (first) first.focus();
+    }
+    return !invalid;
+  }
+
+  form.addEventListener('click', function (e) {
+    var nx = e.target.closest('[data-next]'), bk = e.target.closest('[data-back]');
+    if (nx) { if (valid(cur)) show(parseInt(nx.dataset.next, 10)); }
+    else if (bk) { show(parseInt(bk.dataset.back, 10)); }
+  });
+
+  form.addEventListener('input', function (e) {
+    var f = e.target.closest('.field'); if (f) f.classList.remove('is-bad');
+    var c = e.target.closest('.consent'); if (c) c.classList.remove('is-bad');
+  });
+
+  form.addEventListener('submit', function (e) {
+    if (!valid(4)) { e.preventDefault(); return; }
+
+    var d = new Date();
+    var pad = function (v) { return String(v).padStart(2, '0'); };
+    var stamp = d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
+    var rnd = String(Math.floor(1000 + Math.random() * 9000));
+    var refNo = 'CPAL-DR-' + stamp + '-' + rnd;
+
+    document.getElementById('reference').value = refNo;
+    document.getElementById('submitted').value = d.toISOString();
+
+    var f = form;
+    var get = function (n) { var el = f.elements[n]; return el ? (el.value || '').trim() : ''; };
+    var radio = function (n) { var el = f.querySelector('[name="' + n + '"]:checked'); return el ? el.value : ''; };
+
+    var lines = [
+      'Hello CPAL, I have just submitted my subscription form on the website.',
+      '',
+      'Reference: ' + refNo,
+      'Name: ' + get('full_name'),
+      'Plot: ' + get('number_of_plots') + ' x ' + radio('plot_type'),
+      'Payment plan: ' + radio('payment_plan'),
+      'Phone: ' + get('phone_1'),
+      'Email: ' + get('email')
+    ];
+    if (get('referred_by')) lines.push('Referred by: ' + get('referred_by'));
+    lines.push('', 'Please confirm availability and the payment details.');
+
+    try {
+      sessionStorage.setItem('cpal_ref', refNo);
+      sessionStorage.setItem('cpal_name', get('full_name'));
+      sessionStorage.setItem('cpal_wa', lines.join('\n'));
+    } catch (err) {}
+  });
+})();
+</script>
+</body>
+</html>

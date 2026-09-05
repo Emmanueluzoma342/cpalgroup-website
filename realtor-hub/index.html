@@ -71,6 +71,42 @@
     </div>
   </section>
 
+  <section class="s s--warm">
+    <div class="shell">
+      <div style="max-width:760px;">
+        <p class="kicker">Your personal link</p>
+        <h2>Every buyer who uses your link is recorded as yours.</h2>
+        <p class="lede" style="margin-top:16px;">Type your name below and you get a link that belongs
+           to you. Put it on your status, send it in a chat, paste it under a video. When a buyer
+           subscribes through it, your name is already filled in on their form, so there is nothing to
+           argue about later.</p>
+
+        <div class="field" style="margin-top:28px;">
+          <label for="rname">Your full name, as CPAL knows you</label>
+          <input id="rname" type="text" placeholder="Favour Okoro" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="rlink">Your link</label>
+          <input id="rlink" type="text" readonly value="Type your name above"
+                 style="background:#fff; font-family:'Franklin',sans-serif; font-weight:600;">
+        </div>
+
+        <div class="btns" style="margin-top:6px;">
+          <button class="btn btn--navy" type="button" id="rcopy">Copy my link</button>
+          <a class="btn btn--line" id="rshare" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+        </div>
+        <p id="rmsg" style="margin-top:14px; font-size:.96rem; color:var(--ok); font-weight:600;" hidden>
+          Copied. Paste it anywhere.</p>
+
+        <div class="note" style="margin-top:30px;">
+          <p style="margin:0;">Use the same spelling every time. If you send it as Favour Okoro once and
+             F. Okoro the next time, the office sees two different realtors. Pick one spelling and keep it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="s s--ink">
     <div class="shell">
       <p class="kicker">Share these</p>
@@ -176,6 +212,7 @@
           <li><a href="/academy/">Academy</a></li>
           <li><a href="/realtors/">Become a realtor</a></li>
           <li><a href="/blog/">Guides</a></li>
+          <li><a href="/privacy/">Privacy notice</a></li>
         </ul>
       </div>
       <div>
@@ -183,8 +220,9 @@
         <ul>
           <li><a href="tel:+2348067898622">0806 789 8622</a></li>
           <li><a href="tel:+2349029312069">0902 931 2069</a></li>
-          <li><a href="mailto:cpalrealities@gmail.com">cpalrealities@gmail.com</a></li>
+          <li><a href="mailto:info@cpalgroup.com">info@cpalgroup.com</a></li>
           <li><a href="/contact/">Book an inspection</a></li>
+          <li><a href="/subscribe/">Subscribe for a plot</a></li>
         </ul>
       </div>
     </div>
@@ -220,6 +258,36 @@
   if (b && n) b.addEventListener('click', function(){
     var open = n.classList.toggle('open');
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>
+<script>
+(function () {
+  var n = document.getElementById('rname'), out = document.getElementById('rlink');
+  var copy = document.getElementById('rcopy'), share = document.getElementById('rshare');
+  var msg = document.getElementById('rmsg');
+  if (!n) return;
+  function build() {
+    var v = n.value.trim().replace(/\s+/g, ' ');
+    if (!v) { out.value = 'Type your name above'; share.href = '#'; return ''; }
+    var url = 'https://cpalgroup.com/subscribe/?ref=' + encodeURIComponent(v);
+    out.value = url;
+    share.href = 'https://wa.me/?text=' + encodeURIComponent(
+      'Doctor\u2019s Residence, Atuma-Iga, Asaba. Plots from \u20A64.5m, \u20A6500,000 deposit.\n\n'
+      + 'Subscribe here: ' + url);
+    return url;
+  }
+  n.addEventListener('input', function () { build(); msg.hidden = true; });
+  copy.addEventListener('click', function () {
+    var url = build();
+    if (!url) { n.focus(); return; }
+    out.select(); out.setSelectionRange(0, 99999);
+    var done = false;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function () { msg.hidden = false; });
+      done = true;
+    }
+    if (!done) { try { document.execCommand('copy'); msg.hidden = false; } catch (e) {} }
   });
 })();
 </script>

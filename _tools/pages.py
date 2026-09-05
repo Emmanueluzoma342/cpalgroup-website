@@ -511,7 +511,7 @@ write('/contact/',
           <div class="docs" style="margin-top:16px;">
             <div class="doc"><b>Phone and WhatsApp</b><span><a href="tel:{PHONE}" style="color:var(--navy);">0806 789 8622</a></span></div>
             <div class="doc"><b>Second line</b><span><a href="tel:+2349029312069" style="color:var(--navy);">0902 931 2069</a></span></div>
-            <div class="doc"><b>Email</b><span><a href="mailto:cpalrealities@gmail.com" style="color:var(--navy);">cpalrealities@gmail.com</a></span></div>
+            <div class="doc"><b>Email</b><span><a href="mailto:info@cpalgroup.com" style="color:var(--navy);">info@cpalgroup.com</a></span></div>
             <div class="doc"><b>Office</b><span>Emegoz Plaza, beside Ezenei Junction, along Asaba-Benin Expressway, Asaba, Delta State</span></div>
             <div class="doc"><b>Inspections</b><span>Mondays, Thursdays and Saturdays. Virtual by arrangement.</span></div>
             <div class="doc"><b>Registration</b><span>RC 8324784</span></div>
