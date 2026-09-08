@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /thank-you/
+Disallow: /pack/
 
 Sitemap: https://cpalgroup.com/sitemap.xml

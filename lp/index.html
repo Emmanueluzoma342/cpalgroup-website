@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Land 13 minutes from Asaba, from ₦4.5m | Doctor's Residence | CPAL</title>
+<meta name="description" content="464 sqm plots at Atuma-Iga, 13 minutes from Asaba. Deed of assignment in your own name. Free 17-page buyer pack.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="Land 13 minutes from Asaba, from ₦4.5m">
+<meta property="og:description" content="464 sqm. Deed of assignment in your own name. Free 17-page buyer pack.">
+<meta property="og:image" content="/assets/img/hero-couple.jpg">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/css/cpal.css">
+<style>
+  .hero{ padding:28px 0 34px; }
+  @media (min-width:901px){ .hero{ padding:50px 0 46px; } }
+  .h1{ font-family:'Franklin',sans-serif; font-weight:800; line-height:1.05;
+       font-size:clamp(2rem,7vw,3.05rem); letter-spacing:-.02em; margin:14px 0 0; color:#fff; }
+  .h1 em{ font-style:normal; color:var(--gold); }
+  .subline{ color:#D7E3EF; font-size:clamp(1rem,2.6vw,1.14rem); line-height:1.55; margin:16px 0 0; }
+  .quick{ display:flex; flex-wrap:wrap; gap:9px; margin:20px 0 0; }
+  .quick span{ background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.2);
+       border-radius:100px; padding:9px 15px; font-size:.92rem; color:#EAF1F8;
+       font-family:'Franklin',sans-serif; font-weight:600; }
+
+  .grid{ display:grid; grid-template-columns:1fr; gap:26px; align-items:start; }
+  @media (min-width:901px){ .grid{ grid-template-columns:1.02fr .98fr; gap:46px; } }
+  .formwrap{ order:-1; }
+  @media (min-width:901px){ .formwrap{ order:0; } }
+
+  .card{ background:#fff; border-radius:var(--r); padding:24px 20px 22px;
+         box-shadow:0 18px 44px rgba(11,36,64,.22); }
+  @media (min-width:620px){ .card{ padding:30px 28px 26px; } }
+  .card h2{ font-size:1.28rem; margin:0 0 4px; }
+  .card .lead{ color:var(--muted); font-size:.97rem; margin:0 0 18px; line-height:1.5; }
+  .card .field{ margin-bottom:15px; }
+  .opts{ display:grid; gap:9px; }
+  .opt{ position:relative; display:block; border:1.5px solid var(--line); border-radius:var(--r);
+        background:#fff; padding:13px 16px; cursor:pointer; font-size:1rem; }
+  .opt input{ position:absolute; opacity:0; width:0; height:0; }
+  .opt:has(input:checked){ border-color:var(--navy); background:rgba(18,63,107,.05);
+        box-shadow:0 0 0 3px rgba(18,63,107,.1); }
+  .optional{ color:var(--muted); font-weight:400; font-size:.9em; }
+  .trust{ font-size:.88rem; color:var(--muted); margin-top:13px; line-height:1.5; }
+  .hp{ position:absolute; left:-9999px; opacity:0; height:0; overflow:hidden; }
+
+  .shot{ width:100%; border-radius:var(--r); display:block; }
+  .cap{ color:#C3D2E2; font-size:.92rem; line-height:1.5; margin-top:11px; }
+  .map{ background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16);
+        border-radius:var(--r); padding:16px 12px 8px; margin:18px 0 0; }
+  .map svg{ width:100%; height:auto; display:block; }
+
+  .reframe{ display:grid; gap:14px; margin-top:26px; }
+  @media (min-width:760px){ .reframe{ grid-template-columns:repeat(3,1fr); } }
+  .reframe div{ background:#fff; border:1.5px solid var(--line); border-left:5px solid var(--gold);
+       border-radius:var(--r); padding:20px 22px; }
+  .reframe h3{ font-size:1.04rem; margin:0 0 8px; }
+  .reframe p{ margin:0; font-size:.98rem; line-height:1.55; color:var(--body); }
+
+  .tease{ list-style:none; padding:0; margin:24px 0 0; }
+  .tease li{ position:relative; padding-left:36px; margin-bottom:15px; font-size:1.05rem;
+       line-height:1.55; }
+  .tease li::before{ content:""; position:absolute; left:2px; top:8px; width:14px; height:14px;
+       border-radius:50%; border:3px solid var(--gold); }
+
+  .qual{ display:grid; gap:16px; margin-top:24px; }
+  @media (min-width:700px){ .qual{ grid-template-columns:1fr 1fr; } }
+  .qual > div{ border-radius:var(--r); padding:20px 22px; }
+  .qual .no{ background:rgba(196,70,47,.09); border:1.5px solid rgba(196,70,47,.45); }
+  .qual .yes{ background:rgba(31,122,76,.09); border:1.5px solid rgba(63,167,107,.5); }
+  .qual h3{ font-size:.96rem; margin:0 0 12px; letter-spacing:.04em; text-transform:uppercase; }
+  .qual .no h3{ color:#A8321F; }
+  .qual .yes h3{ color:#1E7A4C; }
+  .qual ul{ margin:0; padding-left:20px; }
+  .qual li{ margin-bottom:8px; line-height:1.5; }
+
+  .promise-box{ display:grid; gap:26px; align-items:center; margin-top:22px; }
+  @media (min-width:820px){ .promise-box{ grid-template-columns:1fr 1fr; } }
+
+  .sticky{ position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--navy);
+           border-top:1px solid rgba(232,181,63,.4);
+           padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+           display:flex; gap:12px; align-items:center; justify-content:space-between;
+           transform:translateY(120%); transition:transform .25s ease; }
+  .sticky.on{ transform:translateY(0); }
+  .sticky b{ color:#fff; font-family:'Franklin',sans-serif; font-size:.92rem; line-height:1.25; }
+  .sticky b span{ display:block; color:var(--gold); font-size:.8rem; font-weight:600; }
+  @media (min-width:901px){ .sticky{ display:none; } }
+</style>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '26786909137584547');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=26786909137584547&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<header class="top">
+  <div class="shell top__in">
+    <a class="brand" href="/"><img src="/assets/img/cpal-logo.png" alt="CPAL" width="120" height="36"></a>
+    <a class="btn btn--gold" href="#get" style="padding:10px 18px; font-size:.93rem;">Get the pack</a>
+  </div>
+</header>
+
+<main>
+  <section class="s s--navy hero">
+    <div class="shell">
+
+      <p class="kicker">Atuma-Iga, Oshimili North LGA, Delta State</p>
+      <h1 class="h1">Land <em>13 minutes from Asaba</em>, from ₦4.5m.</h1>
+      <p class="subline">464 square metres. Registered survey plan and deed of assignment, issued in
+         your own name. Start with ₦500,000 and spread the balance over six months.</p>
+
+      <div class="quick">
+        <span>464 sqm plots</span>
+        <span>₦500,000 to start</span>
+        <span>Deed in your name</span>
+      </div>
+
+      <div class="grid" style="margin-top:26px;">
+        <div class="formwrap" id="get">
+          <div class="card">
+            <h2>Get the free buyer pack</h2>
+            <p class="lead">17 pages. The price, every document you receive, the payment plan and the
+               estate layout. Sent straight to your WhatsApp.</p>
+
+            <form id="leadform" name="lp-lead" method="POST" action="/pack/"
+                  data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="lp-lead">
+              <input type="hidden" name="source" id="source" value="">
+              <input type="hidden" name="event_id" id="event_id" value="">
+              <input type="hidden" name="fbp" id="fbp" value="">
+              <input type="hidden" name="fbc" id="fbc" value="">
+              <input type="hidden" name="page_url" id="page_url" value="">
+              <p class="hp"><label>Leave empty <input name="bot-field"></label></p>
+
+              <div class="field"><label for="name">Your name</label>
+                <input id="name" name="full_name" type="text" autocomplete="name">
+                <span class="err">Please enter your name</span></div>
+
+              <div class="field"><label for="phone">WhatsApp number</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                       placeholder="Include country code if you are abroad">
+                <span class="err">We need a number we can send the pack to</span></div>
+
+              <div class="field" id="tlfield">
+                <label>When are you looking to secure a plot?</label>
+                <div class="opts">
+                  <label class="opt"><input type="radio" name="timeline" value="This month">
+                    This month</label>
+                  <label class="opt"><input type="radio" name="timeline" value="Next 3 months">
+                    Within the next 3 months</label>
+                  <label class="opt"><input type="radio" name="timeline" value="Just researching">
+                    Still researching for now</label>
+                </div>
+                <span class="err">Please choose one</span>
+              </div>
+
+              <div class="field"><label for="email">Email <span class="optional">(optional)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                       placeholder="If you want a copy by email too">
+                <span class="err">That email does not look right</span></div>
+
+              <button class="btn btn--gold" type="submit" style="width:100%; justify-content:center;">
+                Send the pack to my WhatsApp</button>
+
+              <p class="trust">You will be taken to WhatsApp to receive it. We send the pack, then one
+                 message asking if you have questions. No daily blasts. See our
+                 <a href="/privacy/" style="color:var(--navy);">privacy notice</a>.</p>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <img class="shot" src="/assets/img/hero-couple.jpg"
+               alt="A couple looking out over cleared land toward homes under construction near Asaba">
+          <p class="cap">Homes already going up around the estate. The concrete beacon in the
+             foreground is how a plot is marked on the ground.</p>
+
+          <div class="map">
+            <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" role="img"
+                 aria-label="Atuma-Iga is a 13 minute drive from Asaba">
+              <line x1="70" y1="86" x2="450" y2="86" stroke="rgba(232,181,63,.3)"
+                    stroke-width="6" stroke-linecap="round"/>
+              <line x1="70" y1="86" x2="450" y2="86" stroke="#E8B53F" stroke-width="3"
+                    stroke-dasharray="2 12" stroke-linecap="round"/>
+              <circle cx="70" cy="86" r="13" fill="#fff"/><circle cx="70" cy="86" r="5.5" fill="#0B2440"/>
+              <text x="70" y="58" fill="#fff" font-family="Franklin, sans-serif" font-weight="800"
+                    font-size="25" text-anchor="middle">ASABA</text>
+              <text x="70" y="118" fill="#8CA3BC" font-family="Franklin, sans-serif"
+                    font-size="13" text-anchor="middle">you know it</text>
+              <g transform="translate(450 90)">
+                <path d="M0 0 C-8 -11 -12 -17 -12 -23 A12 12 0 1 1 12 -23 C12 -17 8 -11 0 0 Z"
+                      fill="#E8B53F"/><circle cx="0" cy="-23" r="4.5" fill="#0B2440"/>
+              </g>
+              <text x="450" y="46" fill="#E8B53F" font-family="Franklin, sans-serif"
+                    font-weight="800" font-size="21" text-anchor="middle">ATUMA-IGA</text>
+              <text x="450" y="118" fill="#C7D6E6" font-family="Franklin, sans-serif"
+                    font-size="13" text-anchor="middle">Doctor&#8217;s Residence</text>
+              <rect x="203" y="69" width="114" height="34" rx="17" fill="#E8B53F"/>
+              <text x="260" y="92" fill="#0B2440" font-family="Franklin, sans-serif"
+                    font-weight="800" font-size="16" text-anchor="middle">13 MINUTES</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- preframe: decide the criteria before they see the offer -->
+  <section class="s">
+    <div class="shell">
+      <div style="max-width:900px; margin-inline:auto;">
+        <p class="kicker">Read this before you compare any estate</p>
+        <h2>Most people ask the price first. It is the wrong first question.</h2>
+        <p class="lede" style="margin-top:14px;">Not because price does not matter. Because two plots
+           at the same price can be completely different things, and by the time you find out which
+           one you bought, the money is gone.</p>
+
+        <div class="reframe">
+          <div>
+            <h3>Price tells you nothing about ownership</h3>
+            <p>Cheap land is easy to find in Delta State. What decides whether it stays yours is the
+               document, and whose name is written on it.</p>
+          </div>
+          <div>
+            <h3>The road decides the value</h3>
+            <p>Not the estate name, not the gate, not the brochure. Land is cheap before the road
+               and never cheap again after it.</p>
+          </div>
+          <div>
+            <h3>A receipt is not a title</h3>
+            <p>A receipt proves you paid somebody money. It does not prove you own land. Those are
+               two entirely different things.</p>
+          </div>
+        </div>
+
+        <p class="lede" style="margin-top:26px;">Judge us on those three, not on our adverts. Then
+           judge every other estate on the same three.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- curiosity: what is inside, framed as open loops -->
+  <section class="s s--warm">
+    <div class="shell">
+      <div style="max-width:820px; margin-inline:auto;">
+        <p class="kicker">Inside the 17 pages</p>
+        <h2>What we put in writing, before you ever speak to anybody.</h2>
+
+        <ul class="tease">
+          <li>Which single document actually transfers ownership to you, and the two papers buyers
+              routinely mistake for it.</li>
+          <li>The full price, and exactly what ₦500,000 does and does not secure on the day you
+              pay it.</li>
+          <li>What happens if you run past six months, written out before you commit rather than
+              explained afterwards.</li>
+          <li>The estate layout, so you can see for yourself which plots sit closest to the road
+              under construction.</li>
+          <li>How buyers outside Nigeria inspect the land properly without flying home, and what to
+              ask us to point the camera at.</li>
+        </ul>
+
+        <div class="note" style="margin-top:28px;">
+          <h3 style="margin-bottom:10px;">Why we give it away</h3>
+          <p style="margin:0;">A buyer who has read all of it asks better questions and wastes less
+             of everybody's time. We would rather you arrive at the land already knowing the terms
+             than discover them halfway through a payment plan.</p>
+        </div>
+
+        <div class="btns" style="margin-top:28px;">
+          <a class="btn btn--navy" href="#get">Send me the 17 pages</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- power guarantee -->
+  <section class="s s--navy">
+    <div class="shell">
+      <div style="max-width:900px; margin-inline:auto;">
+        <p class="kicker">Our promise</p>
+        <h2 style="color:#fff;">You will not pay one naira before you have stood on the land.</h2>
+
+        <div class="promise-box">
+          <div>
+            <p class="lede" style="margin-top:6px;">No deposit to hold a plot. No holding fee. No
+               paying small first so nobody takes it.</p>
+            <p class="lede">Come to Atuma-Iga on a Monday, Thursday or Saturday and walk the
+               boundaries. Bring your own surveyor. Bring a lawyer. Check the beacon numbers against
+               the survey plan yourself. If you are outside Nigeria, we do it on live video with you
+               at a time that suits you.</p>
+            <p class="lede">Only then do we talk about money, and every term goes to you in writing
+               before you pay anything.</p>
+          </div>
+          <div>
+            <img class="shot" src="/assets/img/handover.jpg"
+                 alt="Documents being handed to buyers on site at the estate">
+            <p class="cap">A registered survey plan and a deed of assignment, both issued in your
+               own name.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="shell">
+      <div style="max-width:820px; margin-inline:auto;">
+        <p class="kicker">Why this location</p>
+        <h2>The road is not a promise. It is under construction.</h2>
+        <p class="lede" style="margin-top:14px;">Most estates sell you a plan for what an area might
+           become. At Atuma-Iga, the Delta State Ministry of Works has a signboard on the ground for
+           the construction of the internal road, with the contractor named on it. We did not print
+           that sign. Go and read it yourself.</p>
+        <img class="shot" src="/assets/img/delta-road-project-signboard.jpg"
+             alt="Delta State Government signboard for the Atuma-Iga internal road construction"
+             style="max-width:430px; margin-top:24px; box-shadow:0 12px 30px rgba(11,36,64,.2);">
+      </div>
+    </div>
+  </section>
+
+  <section class="s s--warm">
+    <div class="shell">
+      <div style="max-width:820px; margin-inline:auto;">
+        <p class="kicker">Before you request it</p>
+        <h2>This is not for everybody.</h2>
+        <p class="lede" style="margin-top:12px;">We would rather tell you now than waste your
+           Saturday morning.</p>
+
+        <div class="qual">
+          <div class="no">
+            <h3>Please skip this if</h3>
+            <ul>
+              <li>You are only checking prices</li>
+              <li>You cannot start with ₦500,000 this quarter</li>
+              <li>You want to pay after you have built</li>
+            </ul>
+          </div>
+          <div class="yes">
+            <h3>Request it if</h3>
+            <ul>
+              <li>You are ready to own land near Asaba this year</li>
+              <li>You want the deed issued in your own name</li>
+              <li>You will walk it, or send someone you trust</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="btns" style="margin-top:28px;">
+          <a class="btn btn--navy" href="#get">That is me. Send the pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="shell">
+      <div style="max-width:820px; margin-inline:auto;">
+        <p class="kicker">Ask this of every estate you are shown</p>
+        <h2>Four questions worth asking anybody, including us.</h2>
+        <div class="rows" style="margin-top:22px;">
+          <div class="row"><h3>What document am I getting, and whose name goes on it?</h3>
+            <p>Here it is a registered survey plan and a deed of assignment, both issued in your own
+               name. If a seller needs more than one sentence to answer this, be careful.</p></div>
+          <div class="row"><h3>Can I walk the land before I pay anything?</h3>
+            <p>Inspections hold Mondays, Thursdays and Saturdays. Bring your own surveyor or lawyer.
+               If you are abroad we walk it on live video with you.</p></div>
+          <div class="row"><h3>What happens if I cannot finish paying?</h3>
+            <p>The penalty is 5 percent of the property price for each month past six months. It is
+               written into your terms in plain language, not buried in small print.</p></div>
+          <div class="row"><h3>Who exactly is the company?</h3>
+            <p>Chuks Properties Academy Limited, RC 8324784. Emegoz Plaza, beside Ezenei Junction,
+               along Asaba-Benin Expressway, Asaba. You can walk into the office.</p></div>
+        </div>
+        <div class="btns" style="margin-top:28px;">
+          <a class="btn btn--gold" href="#get">Send me the buyer pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s s--navy">
+    <div class="shell">
+      <div class="note note--navy" style="max-width:820px; margin-inline:auto;">
+        <h3 style="margin-bottom:12px;">Before you send money to anybody</h3>
+        <p style="margin:0;">CPAL confirms account details with you directly, by call or in writing.
+           Never act on account details sent through a status update, a group chat or a forwarded
+           flyer. Call <a href="tel:+2348067898622" style="color:var(--gold);">0806 789 8622</a>
+           and check first.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__base" style="border:0;">
+      <span>Chuks Properties Academy Limited, RC 8324784. Land is sold as ownership.
+            CPAL does not offer investment returns.</span>
+      <span><a href="/privacy/">Privacy notice</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <b>Free 17-page buyer pack<span>₦4.5m · 464 sqm · 13 min from Asaba</span></b>
+  <a class="btn btn--gold" href="#get" style="padding:12px 18px; font-size:.93rem;">Get it</a>
+</div>
+
+<script>
+(function () {
+  var f = document.getElementById('leadform');
+  if (!f) return;
+
+  try {
+    var p = new URLSearchParams(location.search);
+    var tag = p.get('utm_content') || p.get('utm_campaign') || p.get('ad') || '';
+    document.getElementById('source').value = tag.replace(/[<>]/g, '').slice(0, 80);
+  } catch (e) {}
+
+  // Meta's own cookies raise server-side match quality a lot, so pass them through.
+  function cookie(name) {
+    var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+    return m ? m.pop() : '';
+  }
+  function syncMetaIds() {
+    var fbp = cookie('_fbp'), fbc = cookie('_fbc');
+    if (!fbc) {
+      try {
+        var cid = new URLSearchParams(location.search).get('fbclid');
+        if (cid) fbc = 'fb.1.' + Date.now() + '.' + cid;
+      } catch (e) {}
+    }
+    document.getElementById('fbp').value = fbp || '';
+    document.getElementById('fbc').value = fbc || '';
+    document.getElementById('page_url').value = location.href.split('#')[0].slice(0, 500);
+  }
+  syncMetaIds();
+  setTimeout(syncMetaIds, 1500);   // _fbp is written by the pixel a moment after load
+
+  var bar = document.getElementById('sticky'), anchor = document.getElementById('get');
+  function onScroll() {
+    if (!anchor || !bar) return;
+    bar.classList.toggle('on', anchor.getBoundingClientRect().bottom < 0);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  function bad(el, isBad) {
+    var w = el.closest('.field'); if (w) w.classList.toggle('is-bad', isBad); return isBad;
+  }
+  f.addEventListener('input', function (e) {
+    var w = e.target.closest('.field'); if (w) w.classList.remove('is-bad');
+  });
+  f.addEventListener('change', function (e) {
+    if (e.target.name === 'timeline') document.getElementById('tlfield').classList.remove('is-bad');
+  });
+
+  f.addEventListener('submit', function (e) {
+    var invalid = false;
+    var n = document.getElementById('name');
+    if (bad(n, !n.value.trim())) invalid = true;
+
+    var ph = document.getElementById('phone');
+    var d = ph.value.replace(/\D/g, '').length;
+    if (bad(ph, !(d >= 7 && d <= 15))) invalid = true;
+
+    var em = document.getElementById('email');
+    var ev = em.value.trim();
+    if (bad(em, ev !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(ev))) invalid = true;
+
+    var t = f.querySelector('[name="timeline"]:checked');
+    document.getElementById('tlfield').classList.toggle('is-bad', !t);
+    if (!t) invalid = true;
+
+    if (invalid) {
+      e.preventDefault();
+      var first = f.querySelector('.is-bad input');
+      if (first) first.focus();
+      return;
+    }
+
+    // Shared id so the browser event and a future Conversions API call deduplicate.
+    var eid = 'lead-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+    document.getElementById('event_id').value = eid;
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead', {
+        content_name: "Doctor's Residence buyer pack",
+        content_category: 'Land',
+        timeline: t.value
+      }, { eventID: eid });
+    }
+
+    try {
+      sessionStorage.setItem('cpal_lp_name', n.value.trim());
+      sessionStorage.setItem('cpal_lp_eid', eid);
+      sessionStorage.setItem('cpal_lp_wa',
+        'Hello CPAL, I just requested the Doctor\u2019s Residence buyer pack on your website.\n\n'
+        + 'Name: ' + n.value.trim() + '\n'
+        + 'Phone: ' + ph.value.trim() + '\n'
+        + 'Timeline: ' + t.value + '\n\n'
+        + 'Please send it across.');
+    } catch (err) {}
+  });
+})();
+</script>
+</body>
+</html>

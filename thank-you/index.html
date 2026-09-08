@@ -57,9 +57,11 @@
           <a class="btn btn--ghost" href="/assets/docs/doctors-residence-prospect-pack.pdf" download>
             Download the prospect pack</a>
         </div>
-        <p style="margin-top:18px; color:#C3D2E2; font-size:.98rem;">Tapping the WhatsApp button opens
-           a message with your reference already written, so the conversation starts on your own phone
-           and you keep a copy of everything.</p>
+        <p style="margin-top:18px; color:var(--gold); font-size:1.02rem; font-weight:600;"
+           id="wacount">Opening WhatsApp in 4...</p>
+        <p style="margin-top:8px; color:#C3D2E2; font-size:.98rem;">Your message already has your
+           reference number in it. Just press send. If WhatsApp does not open by itself, tap the
+           button above.</p>
       </div>
     </div>
   </section>
@@ -142,10 +144,21 @@
   try { ref = sessionStorage.getItem('cpal_ref') || ''; msg = sessionStorage.getItem('cpal_wa') || ''; } catch (e) {}
   if (ref && refEl) refEl.textContent = ref;
   else if (refEl) refEl.parentElement.hidden = true;
-  if (wa) {
-    wa.href = 'https://wa.me/2348067898622?text=' + encodeURIComponent(
-      msg || 'Hello CPAL, I have just submitted my subscription form on the website.');
-  }
+
+  var link = 'https://wa.me/2348067898622?text=' + encodeURIComponent(
+    msg || 'Hello CPAL, I have just submitted my subscription form on the website.');
+  if (wa) wa.href = link;
+
+  // Automatic handoff to WhatsApp, with a visible countdown and a manual fallback.
+  var el = document.getElementById('wacount');
+  var n = 4;
+  var t = setInterval(function () {
+    n -= 1;
+    if (el) el.textContent = n > 0
+      ? 'Opening WhatsApp in ' + n + '...'
+      : 'Opening WhatsApp...';
+    if (n <= 0) { clearInterval(t); window.location.href = link; }
+  }, 1000);
 })();
 </script>
 </body>

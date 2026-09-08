@@ -61,6 +61,10 @@
           <input type="hidden" name="form-name" value="subscription">
           <input type="hidden" name="reference" id="reference">
           <input type="hidden" name="submitted" id="submitted">
+          <input type="hidden" name="event_id" id="event_id">
+          <input type="hidden" name="fbp" id="fbp">
+          <input type="hidden" name="fbc" id="fbc">
+          <input type="hidden" name="page_url" id="page_url">
           <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
 
           <!-- ---------------- step 1 ---------------- -->
@@ -404,6 +408,15 @@
 
     document.getElementById('reference').value = refNo;
     document.getElementById('submitted').value = d.toISOString();
+
+    function cookie(name) {
+      var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return m ? m.pop() : '';
+    }
+    document.getElementById('event_id').value = refNo;
+    document.getElementById('fbp').value = cookie('_fbp') || '';
+    document.getElementById('fbc').value = cookie('_fbc') || '';
+    document.getElementById('page_url').value = location.href.split('#')[0].slice(0, 500);
 
     var f = form;
     var get = function (n) { var el = f.elements[n]; return el ? (el.value || '').trim() : ''; };
