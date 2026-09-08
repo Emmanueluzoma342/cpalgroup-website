@@ -57,7 +57,7 @@
   .next li{ margin-bottom:4px; }
   .hp{ position:absolute; left:-9999px; opacity:0; height:0; overflow:hidden; }
 
-  .shot{ width:100%; border-radius:var(--r); display:block; }
+  .shot{ width:100%; height:auto; border-radius:var(--r); display:block; }
   .cap{ color:#C3D2E2; font-size:.9rem; line-height:1.5; margin-top:10px; }
   .map{ background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16);
         border-radius:var(--r); padding:16px 12px 8px; margin:16px 0 0; }
@@ -89,7 +89,8 @@
 
   .founder{ display:grid; gap:26px; align-items:center; margin-top:24px; }
   @media (min-width:760px){ .founder{ grid-template-columns:270px 1fr; } }
-  .founder img{ width:100%; border-radius:var(--r); display:block; }
+  .founder img{ width:100%; height:auto; border-radius:var(--r); display:block;
+                aspect-ratio:620/756; object-fit:cover; object-position:top center; }
   .sig{ font-family:'Franklin',sans-serif; font-weight:800; font-size:1.06rem; color:#fff;
         margin:20px 0 2px; }
   .sig + span{ color:var(--gold); font-size:.94rem; }
@@ -173,8 +174,8 @@ fbq('track', 'PageView');
         <div class="formwrap" id="get">
           <div class="card">
             <h2>Get the free buyer pack</h2>
-            <p class="lead">17 pages. The price, every document you receive, the payment plan and the
-               estate layout. Sent straight to your WhatsApp.</p>
+            <p class="lead">Fill in the three boxes below, then press the gold button. WhatsApp will
+               open with your message already typed. Press send, and we reply with the 17 pages.</p>
 
             <form id="leadform" name="lp-lead" method="POST" action="/pack/"
                   data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
@@ -190,10 +191,10 @@ fbq('track', 'PageView');
                 <input id="name" name="full_name" type="text" autocomplete="name">
                 <span class="err">Please enter your name</span></div>
 
-              <div class="field"><label for="phone">WhatsApp number</label>
+              <div class="field"><label for="phone">Phone number</label>
                 <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
                        placeholder="Include country code if you are abroad">
-                <span class="err">We need a number we can send the pack to</span></div>
+                <span class="err">We need a number we can reach you on</span></div>
 
               <div class="field" id="tlfield">
                 <label>When are you looking to secure a plot?</label>
@@ -214,15 +215,17 @@ fbq('track', 'PageView');
                 <span class="err">That email does not look right</span></div>
 
               <button class="btn btn--gold" type="submit" style="width:100%; justify-content:center;">
-                Send the pack to my WhatsApp</button>
+                Press here to get the pack</button>
               <p class="micro">Takes about 30 seconds. No payment, no commitment.</p>
 
               <div class="next">
-                <b>What happens after you press it</b>
+                <b>Exactly what happens, step by step</b>
                 <ol>
-                  <li>WhatsApp opens with your message already written</li>
-                  <li>You press send, we reply with the 17 pages</li>
-                  <li>One message asking if you have questions. That is all</li>
+                  <li>You fill in your name, phone number and when you are buying</li>
+                  <li>You press the gold button above</li>
+                  <li>WhatsApp opens by itself, with your message already typed for you</li>
+                  <li>You press send in WhatsApp</li>
+                  <li>We reply with the 17-page pack</li>
                 </ol>
               </div>
             </form>
@@ -230,10 +233,11 @@ fbq('track', 'PageView');
         </div>
 
         <div>
-          <img class="shot" src="/assets/img/launch-day.jpg" width="1280" height="720"
+          <img class="shot" src="/assets/img/hero-couple.jpg" width="1536" height="1024"
                loading="lazy" decoding="async"
-               alt="Buyers gathered on the land at Atuma-Iga on launch day">
-          <p class="cap">Launch day at Atuma-Iga. Real buyers, standing on the actual land.</p>
+               alt="Illustration of a couple looking out over land toward homes under construction">
+          <p class="cap">An illustration of the idea, not a photograph of the estate. The real
+             photographs are further down this page.</p>
 
           <div class="map">
             <svg viewBox="0 0 520 150" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -289,7 +293,7 @@ fbq('track', 'PageView');
         </div>
 
         <div class="btns" style="margin-top:26px;">
-          <a class="btn btn--navy" href="#get">Send me the buyer pack</a>
+          <a class="btn btn--navy" href="#get">Fill the form and get the pack</a>
         </div>
       </div>
     </div>
@@ -357,7 +361,7 @@ fbq('track', 'PageView');
         </div>
 
         <div class="btns" style="margin-top:26px;">
-          <a class="btn btn--gold" href="#get">Send me the 17 pages</a>
+          <a class="btn btn--gold" href="#get">Fill the form and get the 17 pages</a>
         </div>
       </div>
     </div>
@@ -397,7 +401,7 @@ fbq('track', 'PageView');
   <section class="s">
     <div class="shell">
       <div style="max-width:900px; margin-inline:auto;">
-        <p class="kicker">Not renders. Photographs.</p>
+        <p class="kicker">Real photographs, taken at Atuma-Iga</p>
         <h2>The road is not a promise. It is under construction.</h2>
         <p class="lede" style="margin-top:14px;">Most estates sell you a plan for what an area might
            become. At Atuma-Iga the Delta State Ministry of Works has a signboard on the ground, with
@@ -417,10 +421,10 @@ fbq('track', 'PageView');
             <figcaption>An inspection in progress. Buyers walk the boundaries themselves.</figcaption>
           </figure>
           <figure>
-            <img src="/assets/img/hero-couple.jpg" width="1536" height="1024"
+            <img src="/assets/img/launch-day.jpg" width="1280" height="720"
                  loading="lazy" decoding="async"
-                 alt="Homes under construction near the estate at sunset">
-            <figcaption>Homes already going up nearby. The concrete post is a survey beacon.</figcaption>
+                 alt="Buyers gathered on the land at Atuma-Iga on launch day">
+            <figcaption>Launch day at Atuma-Iga. Real buyers, standing on the actual land.</figcaption>
           </figure>
         </div>
       </div>
@@ -456,7 +460,7 @@ fbq('track', 'PageView');
         </div>
 
         <div class="btns" style="margin-top:26px;">
-          <a class="btn btn--navy" href="#get">That is me. Send the pack</a>
+          <a class="btn btn--navy" href="#get">That is me. Take me to the form</a>
         </div>
       </div>
     </div>
@@ -507,7 +511,7 @@ fbq('track', 'PageView');
         </div>
 
         <div class="btns" style="margin-top:30px;">
-          <a class="btn btn--gold" href="#get">Send me the buyer pack</a>
+          <a class="btn btn--gold" href="#get">Fill the form and get the pack</a>
         </div>
       </div>
     </div>
