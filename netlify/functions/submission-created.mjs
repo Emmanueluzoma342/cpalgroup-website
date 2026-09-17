@@ -129,8 +129,8 @@ export default async (req) => {
     event_source_url: pageUrl,
     user_data,
     custom_data: {
-      content_name: "Doctor's Residence buyer pack",
-      content_category: 'Land',
+          content_name: formName === 'realtor-join' ? 'CPAL Realtor Community' : "Doctor's Residence buyer pack",
+      content_category: formName === 'realtor-join' ? 'Realtor' : 'Land',
       form: formName,
       timeline: pick(data, ['timeline']) || undefined,
       source: pick(data, ['source']) || undefined,
