@@ -21,6 +21,7 @@ import crypto from 'node:crypto';
 const FORMS = {
   'lp-lead': 'Lead',
   subscription: 'Lead',
+  'realtor-join': 'CompleteRegistration',
 };
 
 /** Meta requires SHA-256 of the normalised, lowercased value. */
